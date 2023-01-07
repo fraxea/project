@@ -1,12 +1,19 @@
 #include <stdio.h>
 
 int square(int a) {
-	return a * a;
+	if (a) return a * a;
+	return 0;
+}
+
+int factorial(int n) {
+	if (n == 0) return 1;
+	return n * factorial(n - 1);
 }
 
 int main() {
 	int a;
 	scanf("%i", &a);
-	printf("%i\n", a);
+	a = factorial(a);
+	printf("%i\n", square(a);
 	return 0;
 }
